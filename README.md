@@ -35,6 +35,7 @@ run_card.dat: It is a standard Madgraph run_card used in CMS
 Step 4. Generate a grid of points. This example varies both the taup and atau masses. Each variation will have its own folder, e.g. VLLs2LLPs_MVLL_100_MA_10
 
 ```
+cd UFOModelGeneration
 python generate_grid.py
 ```
 
