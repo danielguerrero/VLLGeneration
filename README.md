@@ -9,9 +9,10 @@ Step 1. Clone the whole genproductions from git and work there. Checkout the com
 ```
 mkdir MyGeneration
 cd MyGeneration
-git clone https://github.com/cms-sw/genproductions.git
+git clone -n https://github.com/cms-sw/genproductions.git
+cd genproductions
 git checkout -b mygenbranch 60944bc193e0df84dd58a01d3e41e5a9a8e21e24
-cd genproductions/bin/MadGraph5_aMCatNLO # working directory
+cd bin/MadGraph5_aMCatNLO # working directory
 ```
 
 Step 2. Clone the templates in this repository in the cards directory (includes VLL UFO model)
