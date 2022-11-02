@@ -4,7 +4,7 @@ Here is described how to generate events including gridpacks for the VLL UFO mod
 
 ## GridPack Generation
 
-Step 1. Clone the whole genproductions from git and work there. Checkout the commit I used to make the VLL gridpacks. This example uses a Madgraph model, so that will be the working directory.
+Step 1. Clone the whole genproductions from git and work there. Checkout the commit that I used when I made my VLL gridpacks. This example uses a Madgraph model, so that will be the working directory.
 
 ```
 mkdir MyGeneration
