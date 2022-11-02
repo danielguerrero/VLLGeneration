@@ -51,4 +51,5 @@ Step 6. Generate the gridpack in working directory. There are three outputs: VLL
 ```
 source gridpack_generation.sh VLLs2LLPs_MVLL_100_MA_10 cards/UFOModelGeneration/VLLs2LLPs_MVLL_100_MA_10
 ```
+The final message should be something like this "Gridpack created successfully at /uscms/home/guerrero/nobackup/Run2/MyGeneration/genproductions/bin/MadGraph5_aMCatNLO/VLLs2LLPs_MVLL_100_MA_10_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz"
 
