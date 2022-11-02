@@ -37,7 +37,7 @@ python generate_grid.py
 Step 5 Edit gridpack_generation.sh script in the working directory to load your model properly. If the mode is not online (cms-project-generators), then comment the line and add one to copy it from your local model.
 ```
 #wget --no-check-certificate https://cms-project-generators.web.cern.ch/cms-project-generators/$model
-cp /uscms/home/guerrero/nobackup/Run2/LLPS20222/MyGeneration/genproductions/bin/MadGraph5_aMCatNLO/cards/UFOModelGeneration/$model #in my case
+cp /uscms/home/guerrero/nobackup/Run2/LLPS20222/MyGeneration/genproductions/bin/MadGraph5_aMCatNLO/cards/UFOModelGeneration/$model . #mine
 ```
 
 Step 6. Generate the gridpack in working directory. There are three outputs: VLLs2LLPs_MVLL_100_MA_10 (folder), VLLs2LLPs_MVLL_1000_MA_10_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz and VLLs2LLPs_MVLL_100_MA_10.log.
