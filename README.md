@@ -30,7 +30,14 @@ Step 4. Generate a grid of points. This example varies both the taup and atau ma
 ```
 python generate_grid.py
 ```
-Step 5. Generate the gridpack in working directory. There are three outputs: VLLs2LLPs_MVLL_100_MA_10 (folder), VLLs2LLPs_MVLL_1000_MA_10_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz and VLLs2LLPs_MVLL_100_MA_10.log.
+
+Step 5 Edit gridpack_generation.sh in working directory to load your model properly
+```
+#wget --no-check-certificate https://cms-project-generators.web.cern.ch/cms-project-generators/$model
+cp cards/UFOModelGeneration/$model .
+```
+
+Step 6. Generate the gridpack in working directory. There are three outputs: VLLs2LLPs_MVLL_100_MA_10 (folder), VLLs2LLPs_MVLL_1000_MA_10_slc7_amd64_gcc700_CMSSW_10_6_19_tarball.tar.xz and VLLs2LLPs_MVLL_100_MA_10.log.
 ```
 cd ../../
 source gridpack_generation.sh VLLs2LLPs_MVLL_100_MA_10 cards/UFOModelGeneration/VLLs2LLPs_MVLL_100_MA_10
