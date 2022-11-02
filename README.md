@@ -1,4 +1,4 @@
-# VLLGeneration
+# UFO Model Generation
 
 Here is described how to generate events including gridpacks for the VLL UFO model (or similar)
 
