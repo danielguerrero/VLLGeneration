@@ -36,10 +36,9 @@ Step 4. Generate a grid of points. This example varies both the taup and atau ma
 python generate_grid.py
 ```
 
-Step 5 Edit gridpack_generation.sh script in the working directory to load your model properly. If the mode is not online (cms-project-generators), then comment that line and add one to copy it from your local directory.
+Step 5 Edit the gridpack_generation.sh script in the working directory to load your model properly. If the model is not online (cms-project-generators), then comment that line and add one to copy it from your local directory.
 
 ```
-cd ../../
 #wget --no-check-certificate https://cms-project-generators.web.cern.ch/cms-project-generators/$model
 cp /uscms/home/guerrero/nobackup/Run2/LLPS20222/MyGeneration/genproductions/bin/MadGraph5_aMCatNLO/cards/UFOModelGeneration/$model . #mine
 ```
