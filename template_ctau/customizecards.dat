@@ -1,0 +1,5 @@
+set Mtaup TEMPLATEMVLL
+set Matau TEMPLATEMA
+set decay Wtaup auto
+set frblock l5 TEMPLATEAWIDTH
+set decay Watau auto

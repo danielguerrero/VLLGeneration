@@ -1,11 +1,12 @@
 import os
-
+import math
 # the prototype name of the production folder
-prod_proto = "VLLs2LLPs_MVLL_{0}_MA_{1}"
+prod_proto = "VLLs2LLPs_MVLL_{0}_MA_{1}_CTAU_{2}"
 
 ### things to replace are
 ### TEMPLATEMVLL [mVLL]
 ### TEMPLATEMA [mA]
+### TEMPLATEMA [mAwidth]
 
 def change_cards(cardname, replacements):
     
@@ -29,16 +30,24 @@ def change_cards(cardname, replacements):
     os.system('rm %s' % bkpname)
 
 
-def do_point(mvll, ma):
+def do_point(mvll, ma, actau):
+    print "The new ctau [mm]: ",actau
+    #change from ctau [mm] to width [GeV]
+    w = (1.973269E-16)/(float(actau)/1000)
+    
+    awidth = math.sqrt( (math.pi*w*mvll**2)/(ma**3)   )
+   
+    print "The new i5:", awidth
+
     # 1 - create the folder
-    folder = prod_proto.format(mvll, ma)
+    folder = prod_proto.format(mvll, ma, actau)
     if os.path.isdir(folder):
         print " >> folder", folder, "already existing, forcing its deletion"
         os.system('rm -r %s' % folder)
     os.system('mkdir ' + folder)
     
     # 2 - copy the original files
-    template_flrd = 'template'
+    template_flrd = 'template_ctau'
     run_card      = 'run_card.dat'
     proc_card     = 'proc_card.dat'
     param_card    = 'param_card.dat'
@@ -51,8 +60,10 @@ def do_point(mvll, ma):
         os.system('cp %s/%s %s/%s_%s' % (template_flrd, tc, folder, folder, tc) )
 
     replacements = {
-        'TEMPLATEMVLL' : str(mvll),
-        'TEMPLATEMA' : str(ma),
+        'TEMPLATEMVLL'   : str(mvll),
+        'TEMPLATEMA'     : str(ma),
+        'TEMPLATEACTAU'  : str(actau),
+        'TEMPLATEAWIDTH' : str(awidth),
     }
 
     # 3 - edit in place the cards
@@ -64,13 +75,8 @@ def do_point(mvll, ma):
 
 ## mvll, ma
 points = [
-    (200, 2),
-    (300, 2),
-    (400, 2),
-    (500, 2),
-    (600, 2),
-    (700, 2),    
-    (800, 2),
+    (200, 2, 850),
+    (200, 2, 85),
 ]
 
 for p in points:

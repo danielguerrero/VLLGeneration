@@ -1,0 +1,3 @@
+import model Vlepton_pseudoscalar_UFO
+generate p p > taup+ taup-, (taup+ > ta+ atau, atau > a a), (taup- > ta- atau, atau > a a)
+output VLLs2LLPs_MVLL_TEMPLATEMVLL_MA_TEMPLATEMA_CTAU_TEMPLATEACTAU -nojpeg
